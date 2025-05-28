@@ -13,12 +13,17 @@ import CreateQuiz from "@/pages/CreateQuiz";
 import QuizResult from "@/pages/Result";
 import HistoryQuiz from "@/pages/HistoryQuiz";
 import QuizHistoryDetail from "@/pages/QuizHistoryDetail";
+import Profile from "@/pages/Profile";
 
 
 const userRoutes = [
     {
         element: <UserLayout />,
         children: [
+            {
+                path: "/profile",
+                element: <Profile />,
+            },
             {
                 path: "/",
                 element: <Home />,
