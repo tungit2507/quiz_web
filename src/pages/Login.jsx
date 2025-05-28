@@ -1,78 +1,70 @@
 import { FcGoogle } from "react-icons/fc";
-
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router";
+import Logo from "@/assets/image/MSJA-Quiz.jpg";
 
-const Login = ({
-    heading = "Login",
-    subheading = "Welcome back",
-    logo = {
-        url: "https://www.shadcnblocks.com",
-        src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAMFBMVEVHcEwBO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ArBTelAAAAD3RSTlMAI48KNqAWZn/wUb3isNEB+B5uAAAArElEQVQokY2SWRKEIAxEWQLIIn3/2w7MlNI6Zcp8IOEl1Vk05qV5K8U+sXmUKlp+dRptmwIjnoSn9V2BDiqMz3DXRAHPbtx6O52AfBUZ1vzBwI12ZJdchhNvU8bGAwxI32+Z+bj2aCHnDai3wteg061OY7i0e6LpdP9bSOBAhlOBfXDkHHBaroD24eeA45ry6IVK/z2t6HLSeAjQ9iQPXCRVFqfkPaMF7S96Yx/nCQTUmISEGgAAAABJRU5ErkJggg==",
-        alt: "Shadcnblocks",
-    },
-    loginText = "Log in",
-    // googleText = "Log in with Google",
-    signupText = "Don't have an account?",
-    signupUrl = "/sign-up",
-}) => {
-    return (
-        <section className="py-32">
-            <div className="container">
-                <div className="flex flex-col gap-4">
-                    <div className="mx-auto w-full max-w-sm rounded-md p-6 shadow">
-                        <div className="mb-6 flex flex-col items-center">
-                            <a href={logo.url} className="mb-6 flex items-center gap-2">
-                                <img src={logo.src} className="h-10" alt={logo.alt} />
-                            </a>
-                            <h1 className="mb-2 text-2xl font-bold">{heading}</h1>
-                            <p className="text-muted-foreground">{subheading}</p>
-                        </div>
-                        <div>
-                            <div className="grid gap-4">
-                                <Input type="email" placeholder="Enter your email" required />
-                                <div>
-                                    <Input
-                                        type="password"
-                                        placeholder="Enter your password"
-                                        required
-                                    />
-                                </div>
-                                <div className="flex justify-between">
-                                    <div className="flex items-center space-x-2">
-                                        <Checkbox
-                                            id="remember"
-                                            className="border-muted-foreground"
-                                        />
-                                        <label
-                                            htmlFor="remember"
-                                            className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                        >
-                                            Remember me
-                                        </label>
-                                    </div>
-                                    <a href="#" className="text-sm text-primary hover:underline">
-                                        Forgot password
-                                    </a>
-                                </div>
-                                <Button type="submit" className="mt-2 w-full">
-                                    {loginText}
-                                </Button>
-                            </div>
-                            <div className="mx-auto mt-8 flex justify-center gap-1 text-sm text-muted-foreground">
-                                <p>{signupText}</p>
-                                <Link to={signupUrl} className="font-medium text-primary">
-                                    Sign up
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+const Login = () => {
+  return (
+    <section className="py-14">
+      <div className="container">
+        <div className="flex flex-col gap-4">
+          <div className="mx-auto w-full max-w-sm rounded-md p-6 shadow">
+            <div className="mb-6 flex flex-col items-center">
+              <a href="/" className="mb-6 flex items-center gap-2">
+                <img src={Logo} className="h-10" alt="Quiz Web Logo" />
+              </a>
+              <h1 className="mb-2 text-2xl font-bold">Login</h1>
+              <p className="text-muted-foreground">Welcome back</p>
             </div>
-        </section>
-    );
+            <div>
+              <div className="grid gap-4">
+                <Input type="email" placeholder="Enter your email" required />
+                <div>
+                  <Input
+                    type="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
+                <div className="flex justify-between">
+                  <div className="flex items-center space-x-2">
+                    <Checkbox
+                      id="remember"
+                      className="border-muted-foreground"
+                    />
+                    <label
+                      htmlFor="remember"
+                      className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      Remember me
+                    </label>
+                  </div>
+                  <Link to={"/forgot-password"} className="text-sm text-primary hover:underline">
+                    Forgot password
+                  </Link>
+                </div>
+                <Button type="submit" className="mt-2 w-full">
+                  Log in
+                </Button>
+                {/* <Button variant="outline" className="w-full">
+                  <FcGoogle className="mr-2 size-5" />
+                  Log in with Google
+                </Button> */}
+              </div>
+              <div className="mx-auto mt-8 flex justify-center gap-1 text-sm text-muted-foreground">
+                <p>Don't have an account?</p>
+                <Link to="/sign-up" className="font-medium text-primary">
+                  Sign up
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default Login ;
+export default Login;

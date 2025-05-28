@@ -1,9 +1,12 @@
+import Hero from "@/components/Hero";
+import BlogPost from "@/components/BlogPost";
+
 const Home = () => {
     return (
-        <div className="container">
-            <h1>Welcome to the Home Page</h1>
-            <p>This is a simple home page built with React.</p>
-        </div>
+        <>
+            <Hero></Hero>
+            <BlogPost></BlogPost>
+        </>
     );
 }
 

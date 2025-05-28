@@ -9,5 +9,5 @@
     },
     "include": [
         "src"
-    ] 
+, "src/components/.Footer.jsx"    ] 
 }
