@@ -13,4 +13,9 @@ export default defineConfig({
     open: true,
   },
   base: './',
+  resolve: {
+    alias: {
+      '@': '/src'   // @ → src
+    }
+  },
 })

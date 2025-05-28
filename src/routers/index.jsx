@@ -5,10 +5,7 @@ import UserLayout from "../layouts/UserLayout";
 
 
 const routes = [
-    {
-        element: <UserLayout />,
-        children: userRouter,
-    },
+    ...userRouter,
     ...adminRouter,
     {
         path: "*",

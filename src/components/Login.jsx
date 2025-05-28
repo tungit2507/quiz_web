@@ -3,20 +3,19 @@ import { FcGoogle } from "react-icons/fc";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { Link } from "react-router";
 
-const Login = ({
+const Login3 = ({
     heading = "Login",
     subheading = "Welcome back",
     logo = {
         url: "https://www.shadcnblocks.com",
-        src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAMFBMVEVHcEwBO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ABO5ArBTelAAAAD3RSTlMAI48KNqAWZn/wUb3isNEB+B5uAAAArElEQVQokY2SWRKEIAxEWQLIIn3/2w7MlNI6Zcp8IOEl1Vk05qV5K8U+sXmUKlp+dRptmwIjnoSn9V2BDiqMz3DXRAHPbtx6O52AfBUZ1vzBwI12ZJdchhNvU8bGAwxI32+Z+bj2aCHnDai3wteg061OY7i0e6LpdP9bSOBAhlOBfXDkHHBaroD24eeA45ry6IVK/z2t6HLSeAjQ9iQPXCRVFqfkPaMF7S96Yx/nCQTUmISEGgAAAABJRU5ErkJggg==",
+        src: "https://shadcnblocks.com/images/block/logos/shadcnblockscom-icon.svg",
         alt: "Shadcnblocks",
     },
     loginText = "Log in",
-    // googleText = "Log in with Google",
+    googleText = "Log in with Google",
     signupText = "Don't have an account?",
-    signupUrl = "/sign-up",
+    signupUrl = "#",
 }) => {
     return (
         <section className="py-32">
@@ -25,7 +24,7 @@ const Login = ({
                     <div className="mx-auto w-full max-w-sm rounded-md p-6 shadow">
                         <div className="mb-6 flex flex-col items-center">
                             <a href={logo.url} className="mb-6 flex items-center gap-2">
-                                <img src={logo.src} className="h-10" alt={logo.alt} />
+                                <img src={logo.src} className="max-h-8" alt={logo.alt} />
                             </a>
                             <h1 className="mb-2 text-2xl font-bold">{heading}</h1>
                             <p className="text-muted-foreground">{subheading}</p>
@@ -60,12 +59,16 @@ const Login = ({
                                 <Button type="submit" className="mt-2 w-full">
                                     {loginText}
                                 </Button>
+                                <Button variant="outline" className="w-full">
+                                    <FcGoogle className="mr-2 size-5" />
+                                    {googleText}
+                                </Button>
                             </div>
                             <div className="mx-auto mt-8 flex justify-center gap-1 text-sm text-muted-foreground">
                                 <p>{signupText}</p>
-                                <Link to={signupUrl} className="font-medium text-primary">
+                                <a href={signupUrl} className="font-medium text-primary">
                                     Sign up
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -75,4 +78,4 @@ const Login = ({
     );
 };
 
-export default Login ;
+export { Login3 };
