@@ -6,27 +6,26 @@ const About = () => {
     <section className="py-10">
       <div className="">
         <div className="mb-14 grid gap-5 text-center md:grid-cols-2 md:text-left">
-          <h1 className="text-5xl font-semibold">About Quiz Web</h1>
+          <h1 className="text-5xl font-semibold text-center">About Quiz Web</h1>
           <p className="text-muted-foreground">
             Quiz Web is a modern platform for quiz lovers to challenge themselves, learn new things, and compete with friends. Our mission is to make learning fun and accessible for everyone through interactive quizzes on a wide range of topics.
           </p>
         </div>
         <div className="grid cols-12  lg:grid-cols-3">
-         
-            <img
-              src={QuizLogo}
-              alt="Quiz Web Logo"
-              className="size-full max-h-[420px] rounded-xl object-cover lg:col-span-2 bg-center"
-            />
-          <div className="flex flex-col gap-7 md:flex-row lg:flex-col">
-            <div className="w-full text-center lg:text-left bg-muted flex flex-col justify-between gap-6 rounded-xl p-7 md:w-1/2 lg:w-auto">
-                <img
-                    src={QuizLogo}
-                    alt="Quiz Web Logo"
-                    className="h-32 object-cover"
-                  />
+          <img
+            src={QuizLogo}
+            alt="Quiz Web Logo"
+            className="size-full max-h-[420px] rounded-xl object-cover lg:col-span-2 bg-center"
+          />
+          <div className="flex flex-col gap-7 mt-10 lg:mt-0 md:flex-row lg:flex-col justify-center">
+            <div className="w-full text-center lg:text-left bg-muted flex flex-col justify-between gap-6 rounded-xl px-7 py-10 md:w-1/2 lg:w-auto">
+              <img
+                src={QuizLogo}
+                alt="Quiz Web Logo"
+                className="h-32 object-cover"
+              />
               <div className="text-center md:text-left">
-                <p className="mb-2 text-lg font-semibold">Why Choose Quiz Web?</p>
+                <p className="mt-10 lg:mt-0 mb-2 text-lg font-semibold w-full">Why Choose Quiz Web?</p>
                 <p className="text-muted-foreground">
                   Enjoy a seamless quiz experience, track your progress, and join a vibrant community of learners. Whether you want to test your knowledge or just have fun, Quiz Web is the place for you!
                 </p>
@@ -37,13 +36,13 @@ const About = () => {
                 </a>
               </Button>
             </div>
-        
+
           </div>
         </div>
         <div className="bg-muted relative overflow-hidden rounded-xl p-10 md:p-16 mt-10">
           <div className="flex flex-col gap-4 text-center md:text-left">
-            <h2 className="text-4xl font-semibold">Our Achievements</h2>
-            <p className="text-muted-foreground max-w-xl">
+            <h2 className="text-4xl font-semibold text-center">Our Achievements</h2>
+            <p className="text-center">
               We are proud to help thousands of users learn and have fun every day.
             </p>
           </div>

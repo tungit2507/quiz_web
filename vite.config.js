@@ -9,13 +9,13 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    port: 3005,
+    port: 3000,
     open: true,
   },
   base: './',
   resolve: {
     alias: {
-      '@': '/src'  
+      '@': '/src'
     }
   },
 })

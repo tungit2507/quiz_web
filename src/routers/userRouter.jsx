@@ -8,6 +8,11 @@ import Blog from "@/pages/Blog";
 import ForgotPassword from "@/pages/ForgotPassword";
 import EnterOTP from "@/pages/EnterOTP";
 import EnterNewPassword from "@/pages/EnterNewPassword";
+import Quiz from "@/pages/Quiz";
+import CreateQuiz from "@/pages/CreateQuiz";
+import QuizResult from "@/pages/Result";
+import HistoryQuiz from "@/pages/HistoryQuiz";
+import QuizHistoryDetail from "@/pages/QuizHistoryDetail";
 
 
 const userRoutes = [
@@ -30,7 +35,18 @@ const userRoutes = [
                 path: "/blog",
                 element: <Blog />,
             },
-           
+            {
+                path: "/create-quiz",
+                element: <CreateQuiz />,
+            },
+            {
+                path: "/history-quiz",
+                element: <HistoryQuiz />,
+            },
+            {
+                path: "/quiz-history-detail",
+                element: <QuizHistoryDetail />,
+            },
         ]
     },
     {
@@ -57,7 +73,16 @@ const userRoutes = [
         path: "/enter-new-password",
         element: <EnterNewPassword />,
     },
-   
+    {
+        path: "/do-quiz",
+        element: <Quiz />,
+    },
+    {
+        path: "/quiz-result",
+        element: <QuizResult />,
+    },
+
+
 ];
 
 export default userRoutes;

@@ -7,7 +7,7 @@ import Logo from "@/assets/image/MSJA-Quiz.jpg";
 
 const Login = () => {
   return (
-    <section className="py-14">
+    <section className="py-14 h-screen flex justify-center items-center">
       <div className="container">
         <div className="flex flex-col gap-4">
           <div className="mx-auto w-full max-w-sm rounded-md p-6 shadow">
