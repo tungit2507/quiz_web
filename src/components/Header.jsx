@@ -102,10 +102,10 @@ const Header = () => {
                       <NavigationMenuItem>
                         <NavigationMenuTrigger>{`Hello, ${currentUser.name}`}</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                          <NavigationMenuLink className="w-40">Your Profile</NavigationMenuLink>
-                          <NavigationMenuLink className="w-40">Change Password</NavigationMenuLink>
-                          <NavigationMenuLink className="w-40">Manage Quiz</NavigationMenuLink>
-                          <NavigationMenuLink className="w-40">Your Learning Result</NavigationMenuLink>
+                          <NavigationMenuLink className="w-40"><Link to={"/profile"}>Your Profile</Link></NavigationMenuLink>
+                          <NavigationMenuLink className="w-40"><Link to={"/change-password"}>Change Password</Link></NavigationMenuLink>
+                          <NavigationMenuLink className="w-40"><Link to={"/manage-quiz"}>Manage Quiz</Link></NavigationMenuLink>
+                          <NavigationMenuLink className="w-40"><Link to={"/learning-result"}>Your Learning Result</Link></NavigationMenuLink>
                           <NavigationMenuLink className="w-40" onClick={handleLogOut}>Log out</NavigationMenuLink>
                         </NavigationMenuContent>
                       </NavigationMenuItem>
@@ -236,7 +236,7 @@ const Header = () => {
                               {`Hello, ${currentUser.name}`}
                             </AccordionTrigger>
                             <AccordionContent>
-                              <Link to={""} className="text-md font-semibold block py-2">Your Profile</Link>
+                              <Link to={"/profile"} className="text-md font-semibold block py-2">Your Profile</Link>
                               <Link to={""} className="text-md font-semibold block py-2">Change Password</Link>
                               <Link to={""} className="text-md font-semibold block py-2">Your Quiz</Link>
                               <Link to={""} className="text-md font-semibold block py-2">Review Learning Result </Link>
